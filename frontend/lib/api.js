@@ -1,20 +1,23 @@
-const API_URL = "http://localhost:5000";
+const API_URL = process.env.NEXT_PUBLIC_API_URL;
 
 export async function api(path, method = "GET", body) {
-  const token = localStorage.getItem("token");
+  const token =
+    typeof window !== "undefined"
+      ? localStorage.getItem("token")
+      : null;
 
-  const res = await fetch(API_URL + path, {
+  const res = await fetch(`${API_URL}${path}`, {
     method,
     headers: {
       "Content-Type": "application/json",
-      ...(token && { Authorization: `Bearer ${token}` })
+      ...(token && { Authorization: `Bearer ${token}` }),
     },
-    body: body ? JSON.stringify(body) : undefined
+    body: body ? JSON.stringify(body) : undefined,
   });
 
   if (!res.ok) {
-    const err = await res.json();
-    throw new Error(err.message || "Something went wrong");
+    const error = await res.json();
+    throw new Error(error.message || "API Error");
   }
 
   return res.json();

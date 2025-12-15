@@ -4,19 +4,22 @@ A full-stack Task & Project Management System built as part of the **SvaraAI Ful
 The application focuses on clean architecture, modular code, and a modern, responsive UI.
 
 ---
-
-## 🚀 Tech Stack
+## Live Demo
+Frontend: https://<vercel-app>.vercel.app  
+Backend: https://svaraai-task-manager.onrender.com
 
 ### Frontend
 - Next.js 16 (App Router)
 - React.js
 - Tailwind CSS v4
+- Render (Backend)
 
 ### Backend
 - Node.js
 - Express.js
 - MongoDB (Atlas)
 - JWT Authentication
+- Vercel (Frontend)
 
 ---
 
