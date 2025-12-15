@@ -12,14 +12,14 @@ Backend: https://svaraai-task-manager.onrender.com
 - Next.js 16 (App Router)
 - React.js
 - Tailwind CSS v4
-- Render (Backend)
+- Vercel (Frontend) 
 
 ### Backend
 - Node.js
 - Express.js
 - MongoDB (Atlas)
 - JWT Authentication
-- Vercel (Frontend)
+- Render (Backend)
 
 ---
 
