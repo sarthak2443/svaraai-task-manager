@@ -5,7 +5,7 @@ The application focuses on clean architecture, modular code, and a modern, respo
 
 ---
 ## Live Demo
-Frontend: https://<vercel-app>.vercel.app  
+Frontend: https://svaraai-task-manager.vercel.app
 Backend: https://svaraai-task-manager.onrender.com
 
 ### Frontend
