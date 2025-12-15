@@ -1,6 +1,6 @@
-# SvaraAI – Task & Project Management System
+# SvaraAI: Task & Project Management System
 
-A full-stack Task & Project Management System built as part of the **SvaraAI Full Stack Developer Internship Assignment**.  
+A full-stack Task & Project Management System built as part of the **SvaraAI Full Stack Developer Assignment**.  
 The application focuses on clean architecture, modular code, and a modern, responsive UI.
 
 ---
