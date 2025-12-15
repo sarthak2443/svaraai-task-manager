@@ -8,14 +8,11 @@ import "../auth.css";
 
 export default function SignupClient() {
   const router = useRouter();
-
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [loading, setLoading] = useState(false);
 
   async function handleSignup(e) {
     e.preventDefault();
-    setLoading(true);
 
     try {
       await api("/auth/signup", "POST", { email, password });
@@ -23,14 +20,12 @@ export default function SignupClient() {
       router.push("/login");
     } catch (err) {
       alert(err.message || "Signup failed");
-    } finally {
-      setLoading(false);
     }
   }
 
   return (
     <div className="auth-wrapper">
-      {/* BIG APP HEADING */}
+      {/* 🔥 App Heading */}
       <h1 className="app-title">Task Manager</h1>
 
       <div className="auth-card">
@@ -39,7 +34,6 @@ export default function SignupClient() {
         <form onSubmit={handleSignup}>
           <input
             className="auth-input"
-            type="email"
             placeholder="Email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
@@ -55,8 +49,8 @@ export default function SignupClient() {
             required
           />
 
-          <button className="auth-button" type="submit" disabled={loading}>
-            {loading ? "Creating account..." : "Sign Up"}
+          <button className="auth-button" type="submit">
+            Create Account
           </button>
         </form>
 

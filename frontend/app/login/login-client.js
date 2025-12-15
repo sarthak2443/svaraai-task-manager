@@ -10,11 +10,9 @@ export default function LoginClient() {
   const router = useRouter();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [loading, setLoading] = useState(false);
 
   async function handleLogin(e) {
     e.preventDefault();
-    setLoading(true);
 
     try {
       const res = await api("/auth/login", "POST", { email, password });
@@ -22,13 +20,12 @@ export default function LoginClient() {
       router.push("/projects");
     } catch (err) {
       alert(err.message || "Login failed");
-    } finally {
-      setLoading(false);
     }
   }
 
   return (
     <div className="auth-wrapper">
+      {/* 🔥 CENTER HEADING */}
       <h1 className="app-title">Task Manager</h1>
 
       <div className="auth-card">
@@ -37,7 +34,6 @@ export default function LoginClient() {
         <form onSubmit={handleLogin}>
           <input
             className="auth-input"
-            type="email"
             placeholder="Email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
@@ -53,8 +49,8 @@ export default function LoginClient() {
             required
           />
 
-          <button className="auth-button" type="submit" disabled={loading}>
-            {loading ? "Logging in..." : "Login"}
+          <button className="auth-button" type="submit">
+            Login
           </button>
         </form>
 
