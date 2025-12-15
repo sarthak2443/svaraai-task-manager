@@ -1,0 +1,33 @@
+.auth-wrapper {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle at top, #151515, #000000);
+}
+
+.auth-card {
+    width: 360px;
+    background: #0f0f0f;
+    border: 1px solid #2a2a2a;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+}
+
+.auth-title {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.auth-input {
+    width: 100%;
+    margin-bottom: 12px;
+}
+
+.auth-button {
+    width: 100%;
+    margin-top: 8px;
+}
